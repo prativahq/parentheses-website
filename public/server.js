@@ -45,7 +45,7 @@ const getPosts = () => {
     if (err) {
       // console.log(files);
       if (files === undefined) {
-        fs.writeFileSync("public/posts.json", "[]");
+        fs.writeFileSync("src/posts.json", "[]");
       }
       return console.log("Failed to list contents of directory: " + err);
     }
@@ -107,7 +107,7 @@ const getPosts = () => {
           });
           let data = JSON.stringify(sortedList);
           try {
-             fs.writeFileSync("public/posts.json", data);
+             fs.writeFileSync("src/posts.json", data);
           } catch (err) {
             console.log(err)
           }
@@ -118,25 +118,4 @@ const getPosts = () => {
   return;
 };
 
-// const getPages = () => {
-//   fs.readdir(dirPathPages, (err, files) => {
-//     if (err) {
-//       return console.log("Failed to list contents of directory: " + err);
-//     }
-//     files.forEach((file, i) => {
-//       let page;
-//       fs.readFile(`${dirPathPages}/${file}`, "utf8", (err, contents) => {
-//         page = {
-//           content: contents,
-//         };
-//         pagelist.push(page);
-//         let data = JSON.stringify(pagelist);
-//         fs.writeFileSync("src/pages.json", data);
-//       });
-//     });
-//   });
-//   return;
-// };
-
 getPosts();
-// getPages();
