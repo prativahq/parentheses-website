@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import Blogs from "../posts.json";
 
 const meta = {
   title: "",
@@ -12,6 +13,8 @@ const meta = {
 };
 
 export default function Blogs() {
+  const [blogs, setBlogs] = useState(Blogs);
+
   return (
     <React.Fragment>
       <HelmetProvider>
@@ -28,176 +31,52 @@ export default function Blogs() {
               Insights, Trends and Expertise: Dive into our knowledge Hub
             </p>
             <div className="flex flex-wrap -m-8">
-              <div className="w-full md:w-1/2 p-8">
-                <div className="flex flex-wrap lg:items-center -m-4">
-                  <div className="w-auto p-4">
-                    <div className="overflow-hidden rounded-xl">
-                      <img
-                        className="transform hover:scale-105 transition ease-in-out duration-1000"
-                        src="images/blog.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1 p-4">
-                    <div className="md:max-w-xs">
-                      <div className="flex flex-col justify-between h-full">
-                        <div className="mb-6">
-                          <p className="mb-1.5 text-sm text-gray-500 font-medium uppercase tracking-px">
-                            AI solutions
-                          </p>
-                          <a
-                            className="inline-block hover:text-gray-800 hover:underline"
-                            href="#"
-                          >
-                            <h3 className="text-xl font-semibold leading-normal">
-                              AI ethics: Navigating challenges and building
-                              trust
-                            </h3>
-                          </a>
+              {blogs.map((blog) => {
+                return (
+                  <div key={blog.id} className="w-full md:w-1/2 p-8">
+                    <div className="flex flex-wrap lg:items-center -m-4">
+                      <div className="w-auto p-4">
+                        <div className="overflow-hidden rounded-xl">
+                          <img
+                            className="transform hover:scale-105 transition ease-in-out duration-1000"
+                            src={`${blog.thumbnail}`}
+                            alt=""
+                          />
                         </div>
-                        <div className="flex flex-wrap items-center -m-1">
-                          <div className="w-auto p-1">
-                            <img src="images/blog-avatar.png" alt="" />
-                          </div>
-                          <div className="w-auto p-1">
-                            <p className="text-sm font-semibold leading-relaxed">
-                              Bhoomika Mehta
-                            </p>
+                      </div>
+                      <div className="flex-1 p-4">
+                        <div className="md:max-w-xs">
+                          <div className="flex flex-col justify-between h-full">
+                            <div className="mb-6">
+                              <p className="mb-1.5 text-sm text-gray-500 font-medium uppercase tracking-px">
+                                {blog.tag}
+                              </p>
+                              <a
+                                className="inline-block hover:text-gray-800 hover:underline"
+                                href="#"
+                              >
+                                <h3 className="text-xl font-semibold leading-normal">
+                                  {blog.title}
+                                </h3>
+                              </a>
+                            </div>
+                            <div className="flex flex-wrap items-center -m-1">
+                              <div className="w-auto p-1">
+                                <img src="images/blog-avatar.png" alt="" />
+                              </div>
+                              <div className="w-auto p-1">
+                                <p className="text-sm font-semibold leading-relaxed">
+                                  {blog.author}
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 p-8">
-                <div className="flex flex-wrap lg:items-center -m-4">
-                  <div className="w-auto p-4">
-                    <div className="overflow-hidden rounded-xl">
-                      <img
-                        className="transform hover:scale-105 transition ease-in-out duration-1000"
-                        src="images/blog.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1 p-4">
-                    <div className="md:max-w-xs">
-                      <div className="flex flex-col justify-between h-full">
-                        <div className="mb-6">
-                          <p className="mb-1.5 text-sm text-gray-500 font-medium uppercase tracking-px">
-                            Ecommerce
-                          </p>
-                          <a
-                            className="inline-block hover:text-gray-800 hover:underline"
-                            href="#"
-                          >
-                            <h3 className="text-xl font-semibold leading-normal">
-                              Implementing a No-code payment integration for
-                              your Ecommerce business
-                            </h3>
-                          </a>
-                        </div>
-                        <div className="flex flex-wrap items-center -m-1">
-                          <div className="w-auto p-1">
-                            <img src="images/blog-avatar.png" alt="" />
-                          </div>
-                          <div className="w-auto p-1">
-                            <p className="text-sm font-semibold leading-relaxed">
-                              Bhoomika Mehta
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 p-8">
-                <div className="flex flex-wrap lg:items-center -m-4">
-                  <div className="w-auto p-4">
-                    <div className="overflow-hidden rounded-xl">
-                      <img
-                        className="transform hover:scale-105 transition ease-in-out duration-1000"
-                        src="images/blog.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1 p-4">
-                    <div className="md:max-w-xs">
-                      <div className="flex flex-col justify-between h-full">
-                        <div className="mb-6">
-                          <p className="mb-1.5 text-sm text-gray-500 font-medium uppercase tracking-px">
-                            AI SOLUTIONS
-                          </p>
-                          <a
-                            className="inline-block hover:text-gray-800 hover:underline"
-                            href="#"
-                          >
-                            <h3 className="text-xl font-semibold leading-normal">
-                              AI to revolutionize CX in 2023
-                            </h3>
-                          </a>
-                        </div>
-                        <div className="flex flex-wrap items-center -m-1">
-                          <div className="w-auto p-1">
-                            <img src="images/blog-avatar.png" alt="" />
-                          </div>
-                          <div className="w-auto p-1">
-                            <p className="text-sm font-semibold leading-relaxed">
-                              Bhoomika Mehta
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 p-8">
-                <div className="flex flex-wrap lg:items-center -m-4">
-                  <div className="w-auto p-4">
-                    <div className="overflow-hidden rounded-xl">
-                      <img
-                        className="transform hover:scale-105 transition ease-in-out duration-1000"
-                        src="images/blog.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1 p-4">
-                    <div className="md:max-w-xs">
-                      <div className="flex flex-col justify-between h-full">
-                        <div className="mb-6">
-                          <p className="mb-1.5 text-sm text-gray-500 font-medium uppercase tracking-px">
-                            Ecommerce dashboards
-                          </p>
-                          <a
-                            className="inline-block hover:text-gray-800 hover:underline"
-                            href="#"
-                          >
-                            <h3 className="text-xl font-semibold leading-normal">
-                              Latest trends in analytics for Ecommerce
-                            </h3>
-                          </a>
-                        </div>
-                        <div className="flex flex-wrap items-center -m-1">
-                          <div className="w-auto p-1">
-                            <img src="images/blog-avatar.png" alt="" />
-                          </div>
-                          <div className="w-auto p-1">
-                            <p className="text-sm font-semibold leading-relaxed">
-                              Kusumika Sinha Roy
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </section>
