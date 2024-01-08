@@ -45,7 +45,7 @@ const getPosts = () => {
     if (err) {
       // console.log(files);
       if (files === undefined) {
-        fs.writeFileSync("src/posts.json", "[]");
+        fs.writeFileSync("public/posts.json", "[]");
       }
       return console.log("Failed to list contents of directory: " + err);
     }
@@ -107,7 +107,7 @@ const getPosts = () => {
           });
           let data = JSON.stringify(sortedList);
           try {
-             fs.writeFileSync("src/posts.json", data);
+             fs.writeFileSync("public/posts.json", data);
           } catch (err) {
             console.log(err)
           }
