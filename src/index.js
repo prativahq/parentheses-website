@@ -9,6 +9,7 @@ import PrivacyPolicyPage from "./pages/Privacy_policy.js";
 import TermsAndConditionsPage from "./pages/Terms_and_conditions.js";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { BlogPage } from "./pages/BlogPage.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -35,6 +36,7 @@ root.render(
           path="/termsandconditions"
           element={<TermsAndConditionsPage />}
         />
+        <Route path="/blog/:id" element={<BlogPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

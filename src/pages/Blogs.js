@@ -3,6 +3,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import BlogPosts from "../posts.json";
+import { Link } from "react-router-dom";
 
 const meta = {
   title: "",
@@ -30,19 +31,20 @@ export default function Blogs() {
             <p className="mb-24 font-medium text-gray-600 text-center leading-relaxed md:max-w-lg mx-auto">
               Insights, Trends and Expertise: Dive into our knowledge Hub
             </p>
-            <div className="flex flex-wrap -m-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
               {blogs.map((blog) => {
                 return (
-                  <div key={blog.id} className="w-full md:w-1/2 p-8">
-                    <div className="flex flex-wrap lg:items-center -m-4">
-                      <div className="w-auto p-4">
-                        <div className="overflow-hidden rounded-xl">
-                          <img
-                            className="transform hover:scale-105 transition ease-in-out duration-1000"
-                            src={`${blog.thumbnail}`}
-                            alt=""
-                          />
-                        </div>
+                  <div
+                    key={blog.id}
+                    className="w-full md:w-auto  border border-gray-200 rounded-xl"
+                  >
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-10">
+                      <div className="w-full lg:w-[200px] h-[400px] lg:h-full ">
+                        <img
+                          className="w-full h-full rounded-t-xl lg:rounded-l-xl lg:rounded-r-none "
+                          src={`${blog.thumbnail}`}
+                          alt=""
+                        />
                       </div>
                       <div className="flex-1 p-4">
                         <div className="md:max-w-xs">
@@ -70,6 +72,12 @@ export default function Blogs() {
                                 </p>
                               </div>
                             </div>
+                            <Link
+                              to={`/blog/${blog.id}`}
+                              className="py-3 px-5 w-fit my-5 text-white font-semibold rounded-xl focus:ring focus:ring-pink-300 bg-pink-500 hover:bg-pink-700 transition ease-in-out duration-200"
+                            >
+                              Read Blog
+                            </Link>
                           </div>
                         </div>
                       </div>

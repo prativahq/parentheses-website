@@ -13,7 +13,7 @@ export const Navbar = () => {
               <div className="w-auto mr-14">
                 <Link to="/">
                   <img
-                    src="images/Parentheses-Logo-png-1704447778153.webp"
+                    src="/images/Parentheses-Logo-png-1704447778153.webp"
                     alt=""
                   />
                 </Link>

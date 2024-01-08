@@ -14,7 +14,7 @@ export const Footer = () => {
           <div className="w-auto p-8">
             <Link to={"/"}>
               <img
-                src="images/Parentheses-Logo-png-1704447778153-webp-1704450247313.webp"
+                src="/images/Parentheses-Logo-png-1704447778153.webp"
                 alt=""
               />
             </Link>
