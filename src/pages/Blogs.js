@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import Blogs from "../posts.json";
+import BlogPosts from "../posts.json";
 
 const meta = {
   title: "",
@@ -13,7 +13,7 @@ const meta = {
 };
 
 export default function Blogs() {
-  const [blogs, setBlogs] = useState(Blogs);
+  const [blogs, setBlogs] = useState(BlogPosts);
 
   return (
     <React.Fragment>
