@@ -106,6 +106,7 @@ const getPosts = () => {
             return a.id < b.id ? 1 : -1;
           });
           let data = JSON.stringify(sortedList);
+          console.log(data);
           fs.writeFileSync("src/posts.json", data);
         }
       });
