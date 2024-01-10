@@ -2,7 +2,10 @@ import React from "react";
 
 export const Contact = () => {
   return (
-    <section className="relative py-36 bg-gray-50 overflow-hidden">
+    <section
+      id="book-call"
+      className="relative py-36 bg-gray-50 overflow-hidden"
+    >
       <img
         className="absolute bottom-0 right-0"
         src="images/gradient2.svg"

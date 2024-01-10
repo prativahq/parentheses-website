@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -40,18 +41,20 @@ export const Navbar = () => {
             <div className="flex flex-wrap items-center">
               <div className="w-auto hidden lg:block">
                 <div className="inline-block">
-                  <a
-                    href="#Contact"
-                    className="py-3 px-5 w-full text-white font-semibold rounded-xl focus:ring focus:ring-pink-300 bg-pink-500 hover:bg-pink-700 transition ease-in-out duration-200"
-                  >
-                    <button type="button">Contact us</button>
-                  </a>
+                  {window.location.pathname !== "/blogs" && (
+                    <HashLink
+                      to="#book-call"
+                      className="py-3 px-5 w-full text-white font-semibold rounded-xl focus:ring focus:ring-pink-300 bg-pink-500 hover:bg-pink-700 transition ease-in-out duration-200"
+                    >
+                      <button type="button">Contact us</button>
+                    </HashLink>
+                  )}
                 </div>
               </div>
             </div>
             <button onClick={() => setOpen(!open)} className="w-auto lg:hidden">
               <svg
-                className="navbar-burger text-indigo-600"
+                className="navbar-burger text-pink-500"
                 width={51}
                 height={51}
                 viewBox="0 0 56 56"
@@ -138,12 +141,12 @@ export const Navbar = () => {
               <div className="flex flex-wrap">
                 <div className="w-full">
                   <div className="block">
-                    <button
+                    {/* <button
                       className="py-2.5 px-4 text-base w-full font-medium border border-gray-400 hover:border-gray-500 rounded-xl focus:ring focus:ring-gray-50 bg-white hover:bg-gray-50 transition ease-in-out duration-200"
                       type="button"
                     >
                       Join free for 30 days
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

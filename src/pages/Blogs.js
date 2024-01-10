@@ -39,7 +39,7 @@ export default function Blogs() {
                     className="w-full md:w-auto  border border-gray-200 rounded-xl"
                   >
                     <div className="flex flex-col lg:flex-row lg:items-center gap-10">
-                      <div className="w-full lg:w-[200px] h-[400px] lg:h-full ">
+                      <div className="w-full lg:w-[200px] h-[300px] lg:h-full ">
                         <img
                           className="w-full h-full rounded-t-xl lg:rounded-l-xl lg:rounded-r-none "
                           src={`${blog.thumbnail}`}
