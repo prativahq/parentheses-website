@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "AI ethics: Navigating challenges and building trust"
+title: "Ethics in AI: Navigating challenges and building trust"
 author: Bhoomika Mehta
 date: 2024-01-10T14:11:55.656Z
 tag: educational
