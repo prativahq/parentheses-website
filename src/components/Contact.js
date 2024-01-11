@@ -29,10 +29,6 @@ export const Contact = () => {
     });
   };
 
-  useEffect(() => {
-    toast.success("Welcome to Parentheses Labs");
-  }, []);
-
   return (
     <>
       <section
