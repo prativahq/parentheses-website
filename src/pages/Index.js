@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 const meta = {
   title: "",
@@ -20,6 +21,7 @@ export default function Index() {
         <Helmet {...meta}></Helmet>
       </HelmetProvider>
       <>
+        <Toaster />
         <Navbar />
         <section>
           <div className="overflow-hidden pb-16">
