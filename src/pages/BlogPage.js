@@ -30,7 +30,7 @@ export const BlogPage = () => {
                 <p className="text-lg text-gray-500">{blog[0].date}</p>
               </div>
 
-              <h1 className="mb-2 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-medium font-heading tracking-tighter">
+              <h1 className="mb-2 text-4xl md:text-5xl leading-tight text-darkCoolGray-900 font-semibold font-heading tracking-tighter">
                 {blog[0].title}
               </h1>
               <div className="mb-2 ">

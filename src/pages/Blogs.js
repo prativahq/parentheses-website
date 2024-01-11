@@ -36,9 +36,9 @@ export default function Blogs() {
                 return (
                   <div
                     key={blog.id}
-                    className="w-full md:w-auto  border border-gray-200 rounded-xl"
+                    className="w-full md:w-auto  border border-gray-200 rounded-xl "
                   >
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-10">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:h-[250px]">
                       <div className="w-full lg:w-[200px] h-[300px] lg:h-full ">
                         <img
                           className="w-full h-full rounded-t-xl lg:rounded-l-xl lg:rounded-r-none "
@@ -53,14 +53,14 @@ export default function Blogs() {
                               <p className="mb-1.5 text-sm text-gray-500 font-medium uppercase tracking-px">
                                 {blog.tag}
                               </p>
-                              <a
+                              <Link
                                 className="inline-block hover:text-gray-800 hover:underline"
-                                href="#"
+                                to={`/blog/${blog.id}`}
                               >
                                 <h3 className="text-xl font-semibold leading-normal">
                                   {blog.title}
                                 </h3>
-                              </a>
+                              </Link>
                             </div>
                             <div className="flex flex-wrap items-center -m-1">
                               <div className="w-auto p-1">
