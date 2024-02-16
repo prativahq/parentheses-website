@@ -10,34 +10,34 @@ import TermsAndConditionsPage from "./pages/Terms_and_conditions.js";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BlogPage } from "./pages/BlogPage.js";
+import Experts from "./pages/Experts.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<IndexPage />} />
+  // <React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<IndexPage />} />
 
-        <Route path="/blogs" element={<BlogsPage />} />
+      <Route path="/blogs" element={<BlogsPage />} />
 
-        <Route path="/services" element={<ServicesPage />} />
+      <Route path="/services" element={<ServicesPage />} />
 
-        <Route path="/aisolutionsdraft" element={<AiSolutionsDraftPage />} />
+      <Route path="/aisolutionsdraft" element={<AiSolutionsDraftPage />} />
 
-        <Route
-          path="/refundandcancellation"
-          element={<RefundAndCancellationPage />}
-        />
+      <Route
+        path="/refundandcancellation"
+        element={<RefundAndCancellationPage />}
+      />
 
-        <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
+      <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
 
-        <Route
-          path="/termsandconditions"
-          element={<TermsAndConditionsPage />}
-        />
-        <Route path="/blog/:id" element={<BlogPage />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+      <Route path="/experts" element={<Experts />} />
+
+      <Route path="/termsandconditions" element={<TermsAndConditionsPage />} />
+      <Route path="/blog/:id" element={<BlogPage />} />
+    </Routes>
+  </BrowserRouter>
+  // </React.StrictMode>
 );

@@ -63,17 +63,17 @@ export default function Index() {
               {/* <p className="mb-9 text-gray-900 text-center font-medium">
                 Our exceptional clientele
               </p> */}
-              <div className="flex flex-wrap justify-center items-center -m-8">
+              <div className="flex flex-wrap justify-center items-center -m-8 sm:gap-10">
                 <div className="w-auto ">
                   <a href="https://www.mynemu.com/">
                     <img
                       className="h-full object-cover transform hover:scale-105 transition ease-in-out duration-1000"
-                      src="images/Untitled-design-14-png-1704436461064.webp"
+                      src="images/nemu.webp"
                       alt=""
                     />
                   </a>
                 </div>
-                <div className="w-auto ">
+                {/* <div className="w-auto ">
                   <a target="_blank" href="https://www.willwali.com/">
                     <img
                       className="h-full object-cover transform hover:scale-105 transition ease-in-out duration-1000"
@@ -81,12 +81,12 @@ export default function Index() {
                       alt=""
                     />
                   </a>
-                </div>
+                </div> */}
                 <div className="w-auto ">
                   <a target="_blank" href="https://atlancer.ai/">
                     <img
                       className="h-full object-cover transform hover:scale-105 transition ease-in-out duration-1000"
-                      src="images/Untitled-design-16-png-1704436311129.webp"
+                      src="images/atlancer.webp"
                       alt=""
                     />
                   </a>
@@ -95,7 +95,7 @@ export default function Index() {
                   <a target="_blank" href="https://app.shipfacts.prativa.io/">
                     <img
                       className="h-full object-cover transform hover:scale-105 transition ease-in-out duration-1000"
-                      src="images/Untitled-design-17-png-1704436337619.webp"
+                      src="images/shipfacts.webp"
                       alt=""
                     />
                   </a>
@@ -104,7 +104,7 @@ export default function Index() {
                   <a target="_blank" href="https://pearllemon.com/">
                     <img
                       className="h-full object-cover transform hover:scale-105 transition ease-in-out duration-1000"
-                      src="images/Untitled-design-18-png-1704436370140.webp"
+                      src="images/lemclosers.webp"
                       alt=""
                     />
                   </a>

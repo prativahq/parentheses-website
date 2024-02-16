@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Navbar } from "../components/Navbar";
 import Blogs from "../posts.json";
 import Markdown from "react-markdown";
 import { Footer } from "../components/Footer";
 import { useParams } from "react-router-dom";
 export const BlogPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { id } = useParams();
   const blog = Blogs.filter((blog) => blog.id === Number(id));
   return (

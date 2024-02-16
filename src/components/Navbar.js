@@ -30,6 +30,9 @@ export const Navbar = () => {
                   <li className="mr-9 font-medium hover:text-gray-700">
                     <Link to="/blogs">Blogs</Link>
                   </li>
+                  <li className="mr-9 font-medium hover:text-gray-700">
+                    <Link to="/experts">Experts</Link>
+                  </li>
                   {/* <li className="font-medium hover:text-gray-700">
                     <a href="#Team">Team</a>
                   </li> */}
