@@ -8,15 +8,17 @@ export const Navbar = () => {
   return (
     <div>
       <div className="container mx-auto overflow-hidden">
-        <div className="relative z-20 flex items-center justify-between px-4 py-5 bg-transparent">
+        <div className="relative z-20 flex items-center justify-between  py-5 bg-transparent">
           <div className="w-auto">
             <div className="flex flex-wrap items-center">
               <div className="w-auto mr-14">
-                <Link to="/">
+                <Link to="/" className="flex gap-2 items-center">
                   <img
-                    src="/images/Parentheses-Logo-png-1704447778153.webp"
+                    className="w-[50px]"
+                    src="images/parenthesesLogoNew.png"
                     alt=""
                   />
+                  <span className="font-bold text-lg">Parentheses</span>
                 </Link>
               </div>
               <div className="w-auto hidden lg:block">
@@ -31,7 +33,10 @@ export const Navbar = () => {
                     <Link to="/blogs">Blogs</Link>
                   </li>
                   <li className="mr-9 font-medium hover:text-gray-700">
-                    <Link to="/experts">Experts</Link>
+                    <Link to="/partners">Partners</Link>
+                  </li>
+                  <li className="mr-9 font-medium hover:text-gray-700">
+                    <Link to="/resources">Resources</Link>
                   </li>
                   {/* <li className="font-medium hover:text-gray-700">
                     <a href="#Team">Team</a>
@@ -90,10 +95,7 @@ export const Navbar = () => {
               <div className="flex items-center justify-between -m-2">
                 <div className="w-auto p-2">
                   <a className="inline-block" href="#">
-                    <img
-                      src="images/Parentheses-Logo-png-1704447778153.webp"
-                      alt=""
-                    />
+                    <img src="images/parenthesesLogoNew.jpeg" alt="" />
                   </a>
                 </div>
                 <button onClick={() => setOpen(!open)} className="w-auto p-2">
@@ -136,6 +138,22 @@ export const Navbar = () => {
                 <li className="mb-12">
                   <Link className="font-medium hover:text-gray-700" to="/blogs">
                     Blogs
+                  </Link>
+                </li>
+                <li className="mb-12">
+                  <Link
+                    className="font-medium hover:text-gray-700"
+                    to="/partners"
+                  >
+                    Partners
+                  </Link>
+                </li>
+                <li className="mb-12">
+                  <Link
+                    className="font-medium hover:text-gray-700"
+                    to="/resources"
+                  >
+                    Resources
                   </Link>
                 </li>
               </ul>

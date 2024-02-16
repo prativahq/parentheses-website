@@ -22,9 +22,9 @@ export default function Services() {
         <Navbar />
         <section className="pt-24 pb-40 bg-white overflow-hidden">
           <div className="container px-4 mx-auto">
-            <h2 className="mb-20 text-5xl md:text-6xl font-bold font-heading text-center tracking-px-n leading-none">
+            <h1 className="mb-20 text-5xl md:text-6xl font-bold font-heading text-center tracking-px-n leading-none">
               Develop Apps <br></br>tailored to your vision
-            </h2>
+            </h1>
             <div className="flex flex-wrap -m-16 md:-m-3">
               <div className="w-full md:w-1/3 p-16 md:p-3">
                 <div className="px-10 pt-11 text-center bg-gray-100 h-96 rounded-4xl">

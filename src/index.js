@@ -11,6 +11,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BlogPage } from "./pages/BlogPage.js";
 import Experts from "./pages/Experts.js";
+import Resources from "./pages/Resources.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -33,7 +34,9 @@ root.render(
 
       <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
 
-      <Route path="/experts" element={<Experts />} />
+      <Route path="/partners" element={<Experts />} />
+
+      <Route path="/resources" element={<Resources />} />
 
       <Route path="/termsandconditions" element={<TermsAndConditionsPage />} />
       <Route path="/blog/:id" element={<BlogPage />} />
